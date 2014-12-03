@@ -73,7 +73,7 @@ $(document).ready(function() {
         series: []
     };
 
-    $.get('squat.csv', function(data) {
+    $.get('data/squat.csv', function(data) {
         // split the lines
         var lines = data.split('\n');
         //console.log(lines);

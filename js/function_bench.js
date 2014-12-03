@@ -73,7 +73,7 @@ $(document).ready(function() {
         series: []
     };
 
-    $.get('bench.csv', function(data) {
+    $.get('data/bench.csv', function(data) {
         // split the lines
         var lines = data.split('\n');
         //console.log(lines);

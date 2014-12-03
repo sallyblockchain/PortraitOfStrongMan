@@ -73,7 +73,7 @@ $(document).ready(function() {
         series: []
     };
 
-    $.get('new_data.csv', function(data) {
+    $.get('data/new_data.csv', function(data) {
         // split the lines
         var lines = data.split('\n');
         //console.log(lines);
@@ -115,8 +115,8 @@ $(document).ready(function() {
                         var month = parseInt(dateString[0]) - 1; // months: 0-based index
                         var day = parseInt(dateString[1]);
                         currDate = Date.UTC(year, month, day);
-                        if(found)
-                            console.log(currDate);
+                        //if(found)
+                        //    console.log(currDate);
                         
                     } else {
                         if(itemNo == 1) {

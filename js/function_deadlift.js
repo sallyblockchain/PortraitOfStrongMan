@@ -73,7 +73,7 @@ $( document ).ready( function() {
         series: []
     };
 
-    $.get('deadlift.csv', function(data) {
+    $.get('data/deadlift.csv', function(data) {
         // split the lines
         var lines = data.split('\n');
         //console.log(lines);

@@ -70,7 +70,7 @@ $(document).ready(function() {
         series: []
     };
 
-    $.get('Steve.csv', function(data) {
+    $.get('data/Steve.csv', function(data) {
         // split the lines
         var lines = data.split('\n');
         //console.log(lines);
