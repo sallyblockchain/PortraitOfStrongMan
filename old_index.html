@@ -1,0 +1,101 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <!--<script type="text/javascript" src="js/themes/style_grid.js"></script>-->
+    <script type="text/javascript" src="js/function_jordan.js"></script>
+    <script type="text/javascript" src="js/themes/style_dark.js"></script> 
+    <script src="dropit.js"></script>
+    <link rel="stylesheet" href="dropit.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+     -->
+    <script src="script.js"></script>
+    <!-- <script type="text/javascript" src="js/themes/style_sand.js"></script> -->
+
+    <style type="text/css">
+        /*nav ul ul {
+        display: none;
+    }*/
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+    </style>
+    <link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+    <!-- start header -->
+    <div id="header">
+        <h1>Strongman</h1>
+        <!--<p><a href="http://www.freecsstemplates.org/">By Free CSS Templates</a></p>
+        -->
+    </div>
+    <!-- end header -->
+    <!-- star menu -->
+    <!-- <div id='cssmenu'>
+        <ul>
+           <li><a href='#'><span>Home</span></a></li>
+           <li class='active has-sub'><a href='#'><span>Products</span></a>
+              <ul>
+                 <li class='has-sub'><a href='#'><span>Product 1</span></a>
+                    <ul>
+                       <li><a href='#'><span>Sub Product</span></a></li>
+                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                    </ul>
+                 </li>
+                 <li class='has-sub'><a href='#'><span>Product 2</span></a>
+                    <ul>
+                       <li><a href='#'><span>Sub Product</span></a></li>
+                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                    </ul>
+                 </li>
+              </ul>
+           </li>
+           <li><a href='#'><span>About</span></a></li>
+           <li class='last'><a href='#'><span>Contact</span></a></li>
+        </ul> -->
+    <div id="menu">
+        <nav>
+            <ul class="menu">
+                <li class="current_page_item"><a href="#">Home</a></li>
+                <li><a href="index.html">Overall</a></li>
+                <li><a href="bubble2012data.html">My 2012</a></li>
+                <li><a href="bubble2013data.html">My 2013</a></li>
+                <li><a href="bubble2014data.html">My 2014</a></li>
+                <li><b>Compare</b>
+                    <ul style="float:right  ">
+                        <li><a href="Squat.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Squats</a></li>
+                        <li><a href="Bench.html">Bench Press</a></li>
+                        <li><a href="deadlift.html">Dead Lift</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+    </nav>
+    </div>
+    <!-- end menu -->
+    <!--
+    <div id="top_title">
+        <button id='button2012' type="button" >2012</button>
+        <button id='button2013' type="button" >2013</button>
+        <button id='button2014' type="button" >2014</button>
+    </div>
+    -->
+	<div id="container" style="height: 500px; min-width: 310px; margin: 0 auto"></div>
+	<script type="text/javascript">
+    $(document).ready( function() {
+
+        // $('#button2012').bind('click', load2012data);
+        // $('#button2013').bind('click', load2013data);
+        // $('#button2014').bind('click', load2014data);
+    });
+	
+    
+
+	</script>
+</body>
+</html>

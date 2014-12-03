@@ -1,0 +1,123 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+	<div id="container" style="height: 400px; min-width: 310px; max-width: 600px; margin: 0 auto"></div>
+	<script type="text/javascript">
+		
+        $(document).ready(function() {
+            
+
+            var options = {
+                chart: {
+                    renderTo: 'container',
+                    type: 'column'
+                },
+                title: {
+                    text: 'Fruit Consumption'
+                },
+                xAxis: {
+                    categories: []
+                },
+                yAxis: {
+                    title: {
+                        text: 'Units'
+                    }
+                },
+                series: [{}]
+            };
+            
+            /*
+             Load the data from the CSV file. This is the contents of the file:
+             
+                Apples,Pears,Oranges,Bananas,Plums
+                John,8,4,6,5
+                Jane,3,4,2,3
+                Joe,86,76,79,77
+                Janet,3,16,13,15
+
+                Date,Lift,Weight,Reps,Bodyweight
+                07-18-2011,db curl,55,3,255
+                07-18-2011,db curl,35,8,255
+                07-20-2011,squat,45,10,255
+                
+             */ 
+            $.get('squat.txt', function(data) {
+                // Split the lines
+                var lines = data.split('\n');
+                count = 0;
+                val = [];
+                temp = [];
+                $.each(lines, function(lineNo, line) {
+                    count++;
+                    //val = [];
+                    if(count < 5){
+                        val = [];
+                        console.log(line);
+                        line = line.replace("[","");
+                        line = line.replace("]","");
+                        var v = line.split(",");
+                        for(var i = 0; i<v.length-1;i++){
+                            console.log(v[i]);
+                            val.push(parseFloat(v[i]));
+                        }
+                        console.log(val);
+                        // $.each(line, function(itemNo, item) {
+                        //     val.push(parseFloat(item));
+                           
+                        // });
+                        //line = line.replace("[","");
+                        //line = line.replace("]","");
+                        //var items = line.split(',');
+                        //console.log(items);
+                        //line = line.replace("\"","");
+                        //console.log(line);
+                        temp.push(val);
+                    }
+                });
+                    
+                    // header line containes categories
+                    //if (lineNo == 0) {
+                        // $.each(items, function(itemNo, item) {
+                        //     if (itemNo > 0) options.xAxis.categories.push(item);
+                        // });
+                    //}
+                    
+                    // the rest of the lines contain data with their name in the first position
+                    //else {
+                        var series = { 
+                            name: "DB Curl",
+                            data: []
+                        };
+                        
+                        // $.each(items, function(itemNo, item) {
+                        //     temp.push(parseFloat(item));
+                           
+                        //});
+                        console.log(temp);
+                                                
+                        series.data.push(temp);
+
+                    //}
+                //}//end if(count)
+
+                options.series.push(data);
+                    
+                });
+                
+                var chart = new Highcharts.Chart(options);
+                console.log(chart);
+
+            //});
+            
+            
+        });
+        </script>
+        
+	</script>
+</body>
+</html>
