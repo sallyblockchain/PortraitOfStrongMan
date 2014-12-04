@@ -10,9 +10,9 @@ Instructions for running the visualization:
 1. Have MAMP installed  
 2. Put the whole folder in `htdocs/` directory under `/Applications/MAMP`  
 3. In a web browser, type `http://localhost:8888/PortraitOfStrongMan/`  
-4. Click on different tabs and dropdown tables to switch between different visualization  
+4. Click on different tabs and dropdown menus to switch between different visualization  
 
-Contributors:
+Contributors:  
 -------------  
 * Sally Xiaodan Zhang  
 * Jereme Lamps  
