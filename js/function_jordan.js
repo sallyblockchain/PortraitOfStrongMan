@@ -107,7 +107,7 @@ $(document).ready(function() {
                     if(itemNo == 0) {
                         var found = false;
                         item = item.replace(/"/g, "");
-                        if(item == "06-13-14") {
+                        if(item == "07-13-13") {
                             found = true;
                         }
                         var dateString = item.split('-');
@@ -124,39 +124,46 @@ $(document).ready(function() {
                                 bench.name = actions[0];
                             } 
 
-                            if(currDate == 1374969600000) { // 07-28-13
-                                bench.data.push( {
-                                    x: currDate,
-                                    y: parseFloat(item),
-                                    marker: { 
-                                        //symbol: 'url(http://www.highcharts.com/demo/gfx/sun.png)'
-                                        symbol: 'url(images/sun.png)'
-                                    },
-                                    url: 'https://www.youtube.com/watch?v=yLpOipCyGKs'
-                                } );
-                            } else {
-                                bench.data.push( [currDate, parseFloat(item)] );
-                            }
+                            bench.data.push( [currDate, parseFloat(item)] );
                             
                         } else if (itemNo == 2) {
                             if(squat.name == null) {
                                 squat.name = actions[1];
                             }
+                            if(currDate == 1373673600000) {
+                                squat.data.push({
+                                    x: currDate,
+                                    y: parseFloat(item),
+                                    marker: {
+                                        symbol: 'url(images/strongman.png)'
+                                    },
+                                    url: 'https://www.youtube.com/watch?v=geEBvmYTA44'
+                                });
+                            } else {
+                                squat.data.push( [currDate, parseFloat(item)] );
+                            }
                          
-                            squat.data.push( [currDate, parseFloat(item)] );
-
                         } else if (itemNo == 3) {
                             if(deadlift.name == null) {
                                 deadlift.name = actions[2];
                             }
-                            if(currDate == 1402617600000) {
+                            if(currDate == 1402617600000) { // 06-13-14
                                 deadlift.data.push( {
                                     x: currDate,
-                                    y:parseFloat(item),
+                                    y: parseFloat(item),
                                     marker: {
                                         symbol: 'url(images/strongman.png)'
                                     },
                                     url: 'https://www.youtube.com/watch?v=yLpOipCyGKs'
+                                });
+                            } else if (currDate == 1377820800000) { // 08-30-13
+                                deadlift.data.push( {
+                                    x: currDate,
+                                    y: parseFloat(item),
+                                    marker: {
+                                        symbol: 'url(images/strongman.png)'
+                                    },
+                                    url: 'https://www.youtube.com/watch?v=TnXRXnGgu7c'
                                 });
                             } else {
                                 deadlift.data.push( [currDate, parseFloat(item)] );
